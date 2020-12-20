@@ -1,11 +1,11 @@
 package com.example.nzse_steffen_michael.DataObjects;
 
-public class User {
-    private String name;
-    private String telephone;
-    private String email;
-    private String password;
-    private String address;
+public abstract class User {
+    private final String name;
+    private final String telephone;
+    private final String email;
+    private final String password;
+    private final String address;
 
     public User(String name, String telephone, String email, String password, String address) {
         this.name = name;
