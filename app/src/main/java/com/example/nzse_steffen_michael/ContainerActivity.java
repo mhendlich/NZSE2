@@ -15,11 +15,11 @@ import com.example.nzse_steffen_michael.fragments.ImmoFilter;
 
 import java.util.HashMap;
 
-public class OverviewScreen extends AppCompatActivity {
+public class ContainerActivity extends AppCompatActivity {
 
     private final HashMap<Screen, Class> screenFragmentMap = new HashMap<>();
 
-    public OverviewScreen() {
+    public ContainerActivity() {
         screenFragmentMap.put(Screen.RESULTS, ImmoErgebnisse.class);
         screenFragmentMap.put(Screen.FILTER, ImmoFilter.class);
     }

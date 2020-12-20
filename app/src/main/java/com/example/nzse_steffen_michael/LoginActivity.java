@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends Activity {
+public class LoginActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,8 @@ public class MainActivity extends Activity {
 
 //                if(stringMail.equals("test") && stringPW.equals("1234")){
                 //perform action on click
-                Intent activityChangeIntent = new Intent(MainActivity.this, OverviewScreen.class);
-                MainActivity.this.startActivity(activityChangeIntent);
+                Intent activityChangeIntent = new Intent(LoginActivity.this, ContainerActivity.class);
+                LoginActivity.this.startActivity(activityChangeIntent);
 //                }
             }
         });
