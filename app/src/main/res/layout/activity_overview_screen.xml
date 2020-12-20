@@ -12,8 +12,12 @@
         android:layout_height="wrap_content"
         android:background="#2196F3"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/logo_haus"
+        app:title="Immoapp"
+        app:titleMargin="4dp"
+        app:titleMarginStart="40dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
