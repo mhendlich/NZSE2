@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -27,7 +26,7 @@ public class MainActivity extends Activity {
 
 //                if(stringMail.equals("test") && stringPW.equals("1234")){
                 //perform action on click
-                Intent activityChangeIntent = new Intent(MainActivity.this, overviewScreen.class);
+                Intent activityChangeIntent = new Intent(MainActivity.this, OverviewScreen.class);
                 MainActivity.this.startActivity(activityChangeIntent);
 //                }
             }

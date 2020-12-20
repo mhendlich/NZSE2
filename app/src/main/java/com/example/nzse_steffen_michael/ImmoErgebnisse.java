@@ -3,7 +3,6 @@ package com.example.nzse_steffen_michael;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,7 +20,7 @@ public class ImmoErgebnisse extends Fragment {
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab_Ergebnisse);
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                ((overviewScreen)getActivity()).changeScreen(Screen.FILTER);
+                ((OverviewScreen)getActivity()).changeScreen(Screen.FILTER);
             }
         });
     }
