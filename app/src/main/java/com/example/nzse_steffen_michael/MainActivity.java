@@ -1,6 +1,4 @@
-package com.example.nzse_michael_steffen;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.nzse_steffen_michael;
 
 import android.app.Activity;
 import android.content.Intent;

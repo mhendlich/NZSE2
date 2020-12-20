@@ -1,4 +1,4 @@
-package com.example.nzse_michael_steffen;
+package com.example.nzse_steffen_michael;
 
 import androidx.appcompat.app.AppCompatActivity;
 
