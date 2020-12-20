@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Nzse_michael_steffen">
-        <activity android:name="com.example.nzse_steffen_michael.overviewScreen"></activity>
+        <activity android:name="com.example.nzse_steffen_michael.OverviewScreen"></activity>
         <activity android:name="com.example.nzse_steffen_michael.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
