@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/house_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin_main"
+        android:background="@android:color/transparent"
+        android:descendantFocusability="blocksDescendants"
+        android:drawablePadding="2dp"
+        android:textSize="@dimen/text_size_body"
+        android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fav_icon"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_main"
+            android:background="@android:color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:drawablePadding="2dp"
+            android:singleLine="true"
+            android:textSize="@dimen/bottom_sheet_text" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/rent_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_margin_main"
+            android:background="@android:color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:drawablePadding="2dp"
+            android:singleLine="true"
+            android:textColor="#5692F5"
+            android:textSize="@dimen/bottom_sheet_text" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/line_width"
+        android:background="#5d5d5d"
+        android:descendantFocusability="blocksDescendants" />
+
+</LinearLayout>
