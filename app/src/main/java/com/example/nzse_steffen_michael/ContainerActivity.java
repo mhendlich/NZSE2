@@ -3,15 +3,14 @@ package com.example.nzse_steffen_michael;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.nzse_steffen_michael.DataObjects.Screen;
 import com.example.nzse_steffen_michael.fragments.CreateListing;
-import com.example.nzse_steffen_michael.fragments.Favorites;
 import com.example.nzse_steffen_michael.fragments.ImmoErgebnisse;
 import com.example.nzse_steffen_michael.fragments.ImmoFilter;
 import com.example.nzse_steffen_michael.fragments.Listing;
@@ -23,22 +22,25 @@ import java.util.HashMap;
 public class ContainerActivity extends AppCompatActivity {
 
     private final HashMap<Screen, Class> screenFragmentMap = new HashMap<>();
+    private Screen currentScreen;
 
     public ContainerActivity() {
         screenFragmentMap.put(Screen.RESULTS, ImmoErgebnisse.class);
         screenFragmentMap.put(Screen.FILTER, ImmoFilter.class);
         screenFragmentMap.put(Screen.LISTING, Listing.class);
         screenFragmentMap.put(Screen.PROFILE, Profile.class);
-        screenFragmentMap.put(Screen.FAVORITES, Favorites.class);
         screenFragmentMap.put(Screen.CREATE_LISTING, CreateListing.class);
         screenFragmentMap.put(Screen.REQUESTS, Requests.class);
     }
 
     public void changeScreen(Screen screen) {
+        currentScreen = screen;
+
         Class fragmentClass = screenFragmentMap.get(screen);
         getSupportFragmentManager().beginTransaction()
                 .setReorderingAllowed(true)
                 .replace(R.id.fragment_container_view, fragmentClass, null)
+                .addToBackStack(screen.name())
                 .commit();
     }
 
@@ -53,7 +55,16 @@ public class ContainerActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             changeScreen(Screen.RESULTS);
         }
+    }
 
+    @Override
+    public void onBackPressed() {
+        FragmentManager mgr = getSupportFragmentManager();
+        if (mgr.getBackStackEntryCount() == 0) {
+            super.onBackPressed();
+        } else {
+            mgr.popBackStack();
+        }
     }
 
     @Override
@@ -67,7 +78,7 @@ public class ContainerActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.profile) {
-            Toast.makeText(getApplicationContext(), "PROFILE", Toast.LENGTH_SHORT).show();
+            changeScreen(Screen.PROFILE);
         }
         return true;
     }

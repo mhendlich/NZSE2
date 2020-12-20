@@ -5,7 +5,6 @@ public enum Screen {
     FILTER,
     LISTING,
     PROFILE,
-    FAVORITES,
     CREATE_LISTING,
     REQUESTS
 }
