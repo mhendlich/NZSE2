@@ -1,16 +1,33 @@
 package com.example.nzse_steffen_michael;
 
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.Window;
-import android.widget.Toast;
+import java.util.HashMap;
+import java.util.Map;
 
 public class overviewScreen extends AppCompatActivity {
+
+    private final HashMap<Screen, Class> screenFragmentMap = new HashMap<>();
+
+    public overviewScreen() {
+        screenFragmentMap.put(Screen.RESULTS, ImmoErgebnisse.class);
+        screenFragmentMap.put(Screen.FILTER, ImmoFilter.class);
+    }
+
+    public void changeScreen(Screen screen) {
+        Class fragmentClass = screenFragmentMap.get(screen);
+        getSupportFragmentManager().beginTransaction()
+                .setReorderingAllowed(true)
+                .replace(R.id.fragment_container_view, fragmentClass, null)
+                .commit();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +36,11 @@ public class overviewScreen extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if (savedInstanceState == null) {
+            changeScreen(Screen.RESULTS);
+        }
+
     }
 
     @Override
