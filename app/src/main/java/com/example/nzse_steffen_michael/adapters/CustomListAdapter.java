@@ -49,8 +49,10 @@ public class CustomListAdapter extends ArrayAdapter<ErgebnissDataObject> {
 
         holder.houseName.setText(userErgebnissDataobject.getHouseName());
         if(userErgebnissDataobject.getPrice() != null ){
+
             holder.rent.setText(userErgebnissDataobject.getPrice());
         } else if(userErgebnissDataobject.getRent() != null ) {
+
             holder.rent.setText(userErgebnissDataobject.getRent());
         }
         if(userErgebnissDataobject.isFav()) {
