@@ -9,8 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.nzse_steffen_michael.DataObjects.Screen;
+import com.example.nzse_steffen_michael.fragments.ImmoErgebnisse;
+import com.example.nzse_steffen_michael.fragments.ImmoFilter;
+
 import java.util.HashMap;
-import java.util.Map;
 
 public class OverviewScreen extends AppCompatActivity {
 

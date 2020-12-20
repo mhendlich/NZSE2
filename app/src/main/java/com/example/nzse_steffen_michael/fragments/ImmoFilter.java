@@ -1,4 +1,4 @@
-package com.example.nzse_steffen_michael;
+package com.example.nzse_steffen_michael.fragments;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.nzse_steffen_michael.R;
 
 /**
  * A simple {@link Fragment} subclass.

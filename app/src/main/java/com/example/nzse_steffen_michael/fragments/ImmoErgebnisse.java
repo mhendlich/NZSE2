@@ -1,10 +1,13 @@
-package com.example.nzse_steffen_michael;
+package com.example.nzse_steffen_michael.fragments;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.nzse_steffen_michael.OverviewScreen;
+import com.example.nzse_steffen_michael.R;
+import com.example.nzse_steffen_michael.DataObjects.Screen;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
