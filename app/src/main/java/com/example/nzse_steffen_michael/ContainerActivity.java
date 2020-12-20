@@ -10,8 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.nzse_steffen_michael.DataObjects.Screen;
+import com.example.nzse_steffen_michael.fragments.CreateListing;
+import com.example.nzse_steffen_michael.fragments.Favorites;
 import com.example.nzse_steffen_michael.fragments.ImmoErgebnisse;
 import com.example.nzse_steffen_michael.fragments.ImmoFilter;
+import com.example.nzse_steffen_michael.fragments.Listing;
+import com.example.nzse_steffen_michael.fragments.Profile;
+import com.example.nzse_steffen_michael.fragments.Requests;
 
 import java.util.HashMap;
 
@@ -22,6 +27,11 @@ public class ContainerActivity extends AppCompatActivity {
     public ContainerActivity() {
         screenFragmentMap.put(Screen.RESULTS, ImmoErgebnisse.class);
         screenFragmentMap.put(Screen.FILTER, ImmoFilter.class);
+        screenFragmentMap.put(Screen.LISTING, Listing.class);
+        screenFragmentMap.put(Screen.PROFILE, Profile.class);
+        screenFragmentMap.put(Screen.FAVORITES, Favorites.class);
+        screenFragmentMap.put(Screen.CREATE_LISTING, CreateListing.class);
+        screenFragmentMap.put(Screen.REQUESTS, Requests.class);
     }
 
     public void changeScreen(Screen screen) {
